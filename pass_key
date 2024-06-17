@@ -1,0 +1,38 @@
+# uncompyle6 version 3.9.1
+# Python bytecode version base 3.8.0 (3413)
+# Decompiled from: Python 3.6.8 (default, Jan  5 2024, 08:58:17)
+# [GCC 8.5.0 20210514 (Red Hat 8.5.0-20)]
+# Compiled at: 2024-01-27 07:56:48
+# Size of source mod 2**32: 1249 bytes
+ipdb = "x.nms.zsnc:2gfj006i78ji41hh8j48kj047364j9hk"
+pcmhi = "x.nms.zsnc:11f15hk23ii848f0g8i561420ji5081f"
+executor_usr = "zsnc-xzuutwy-yw"
+executor_pwd = "rP&Z96$M7$74BFIy"
+snow_usr = "xah~YW_ZSNC-XZUUTWY"
+snow_pwd = "~}IUB}l;32XD+E?ac`'^!UxP"
+snow_write_usr = "xah~YW_ZSNC-XZUUTWY_HTSKNL_BW"
+snow_write_pwd = "z+WFU)KuHFR0X+@YmI!jredA;oSsCA1?0?S}n4)x"
+shift = 5
+
+def caesar_cipher_decrypt(decrypt, shift):
+    decrypted_text = ""
+    for char in decrypt:
+        if char.isalpha():
+            base = ord("A") if char.isupper() else ord("a")
+            decrypted_char = chr((ord(char) - base - shift) % 26 + base)
+        else:
+            decrypted_char = char
+        decrypted_text += decrypted_char
+    else:
+        return decrypted_text
+
+
+ipdb_key = caesar_cipher_decrypt(ipdb, shift)
+pcmhi_key = caesar_cipher_decrypt(pcmhi, shift)
+executor_usr = caesar_cipher_decrypt(executor_usr, shift)
+executor_pwd = caesar_cipher_decrypt(executor_pwd, shift)
+snow_usr = caesar_cipher_decrypt(snow_usr, shift)
+snow_pwd = caesar_cipher_decrypt(snow_pwd, shift)
+snow_write_usr = caesar_cipher_decrypt(snow_write_usr, shift)
+snow_write_pwd = caesar_cipher_decrypt(snow_write_pwd, shift)
+
